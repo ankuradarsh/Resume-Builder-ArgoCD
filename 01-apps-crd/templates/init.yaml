@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: init-application
+  namespace: argocd #! - constans parameter
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: resumebuilder
+  syncPolicy:
+    automated:
+      prune: true #! - # that parameter is deliver form terraform appofapps
+      selfHeal: true #! - # that parameter is deliver form terraform appofapps
+    syncOptions:
+        - CreateNamespace=true
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://source.app.pconnect.biz/scm/peo/argocd-appofapps-icloud-greenup-smartu.git # that parameter is deliver form terraform appofapps
+    path: 02-apps-cm/init

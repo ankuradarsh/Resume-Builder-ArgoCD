@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: init-pod
+    namespace: resumebuilder
+spec:
+    containers:
+        - name: example-container
+            image: nginx:latest
+            ports:
+                - containerPort: 80
