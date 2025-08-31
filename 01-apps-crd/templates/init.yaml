@@ -17,5 +17,5 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://source.app.pconnect.biz/scm/peo/argocd-appofapps-icloud-greenup-smartu.git # that parameter is deliver form terraform appofapps
+    repoURL: https://github.com/ankuradarsh/Resume-Builder-ArgoCD.git # that parameter is deliver form terraform appofapps
     path: 02-apps-cm/init
