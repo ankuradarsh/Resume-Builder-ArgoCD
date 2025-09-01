@@ -1,3 +1,3 @@
 apiVersion: v2
-name: 01-apps-cm
+name: 02-apps-cm
 version: 0.1.0
