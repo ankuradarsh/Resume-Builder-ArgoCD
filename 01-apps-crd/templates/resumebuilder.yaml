@@ -18,5 +18,5 @@ spec:
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/ankuradarsh/Resume-Builder-ArgoCD.git # that parameter is deliver form terraform appofapps
-    path: 02-apps-cm/init
+    path: 02-apps-cm/resumebuilder
     targetRevision: main
