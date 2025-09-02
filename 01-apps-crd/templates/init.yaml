@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: init
+  name: resumebuilderapp
   namespace: argocd #! - constans parameter
   finalizers:
     - resources-finalizer.argocd.argoproj.io
