@@ -25,4 +25,3 @@ spec:
             requests:
                 cpu: {{ .Values.resources.requests.cpu }}
                 memory: {{ .Values.resources.requests.memory }}
-{{ toYaml .Values.resources | indent 10 }}
