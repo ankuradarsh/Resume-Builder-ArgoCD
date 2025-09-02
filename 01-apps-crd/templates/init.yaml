@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: init-application
+  name: init
   namespace: argocd #! - constans parameter
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: resumebuilder
   syncPolicy:
@@ -12,10 +12,11 @@ spec:
       prune: true #! - # that parameter is deliver form terraform appofapps
       selfHeal: true #! - # that parameter is deliver form terraform appofapps
     syncOptions:
-        - CreateNamespace=true
+      - CreateNamespace=true
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/ankuradarsh/Resume-Builder-ArgoCD.git # that parameter is deliver form terraform appofapps
     path: 02-apps-cm/init
+    targetRevision: main
