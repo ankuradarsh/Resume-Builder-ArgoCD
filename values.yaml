@@ -1,0 +1,21 @@
+replicaCount: 2
+
+fullname: resumebuilder
+image:
+  repository: ankuradarsh/resume-builder
+  tag: 40
+  pullPolicy: IfNotPresent
+
+containerPort: 5443
+
+service:
+  type: ClusterIP
+  port: 5443
+
+resources:
+  limits:
+   cpu: 100m
+   memory: 256Mi
+  requests:
+   cpu: 60m
+   memory: 128Mi
