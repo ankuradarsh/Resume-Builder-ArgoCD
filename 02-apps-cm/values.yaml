@@ -9,8 +9,9 @@ image:
 containerPort: 5443
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 5443
+  nodePort: 30001
 
 resources:
   limits:
