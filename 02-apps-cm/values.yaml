@@ -3,7 +3,7 @@ replicaCount: 2
 fullname: resumebuilder
 image:
   repository: ankuradarsh/resume-builder
-  tag: 40
+  tag: 58
   pullPolicy: IfNotPresent
 
 containerPort: 5443
